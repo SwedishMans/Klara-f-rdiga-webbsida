@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000cd;
+    color: #000000;
+}
+
+/* Header styling */
+header {
+    background-color: #726d6d;
+    padding: 20px;
+    text-align: center;
+
+    
+}
+
+/* H1 styling */
+h1 {
+    
+    font-size: 36px;
+    color: #000000;
+    border: 10px solid hsl(53, 100%, 67%);
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    display: inline-block;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    color: #000000;
+}
+p{
+    color: #000000;
+}
+/* Flexbox container for the intro and images */
+.intro-container {
+    display: flex;
+    justify-content: space-between; /* Push the text left and images right */
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;              /* Restrict the total width */
+    margin: 0 auto;
+    
+
+   
+}
+
+/* Intro section on the left */
+#intro {
+    flex: 1;
+    background-color: #726d6d;
+    padding: 20px;
+    border: 2px solid hsl(60, 89%, 53%);
+    border-radius: 8px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+/* Images section on the right */
+#images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.klara-image {
+    width: 500px; /* Adjust width */
+    height: auto;
+    
+    border: 10px solid hsl(53, 100%, 67%);
+    border-radius: 20px;
+}
+
+
+
+.storlek-gif {
+
+    position: absolute;  /* Set GIF to absolute positioning */
+    top: 400px;          /* Adjust this value to move vertically */
+    left: 150px;          /* Adjust this value to move horizontally */
+    width: 200px;        /* Set the size of the GIF */
+    height: auto;        /* Maintain aspect ratio */
+
+    border: 10px solid hsl(0, 78%, 69%);
+    border-radius: 20px;
+}
+
+.image-container {
+    position: relative; /* Create a positioning context for the overlay */
+    text-align: center;  /* Center content horizontally */
+    margin-top: 20px;    /* Space above the container */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
+    color: #000; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Adjust font size */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
+
+.bee-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto; /* Centrera container */
+    margin-right: auto; /* Centrera container */
+}
+
+/* Bee image styling */
+.bee-image {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 150px;
+    height: auto;
+}
+/* Button styling */
+#loveButton {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect on button */
+#loveButton:hover {
+    background-color: #d60c0c;
+}
+
+/* Love message styling */
+#loveMessage {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #f31212;
+}
+
+/* Unordered list styling */
+ul {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    max-width: 800px; /* Limit width */
+    margin: 20px auto; /* Center the list */
+}
+
+li {
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+}
+
+.flying-bee {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 150px;
+    height: auto;
+    position: absolute; /* Gör så att biet kan flyttas fritt */
+    transition: transform 1s ease; /* Gör flytten smidig */
+}
+
+@keyframes fly {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    clear: both;
+    max-width: 800px;
+    margin: 40px auto;
+}
